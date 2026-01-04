@@ -6,17 +6,10 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-white px-5 py-6">
       {/* BREADCRUMB (working Links) */}
-      <div className="text-sm text-gray-600 mb-4 flex items-center gap-2">
-        <Link to="#" className="hover:underline text-blue-600">
+      <div className=" mb-4 flex items-center gap-2">
           Home
-        </Link>
         <span className="text-gray-400">/</span>
-        <Link
-          to="/dashboard"
-          className="hover:underline text-gray-800 font-medium"
-        >
           Dashboard
-        </Link>
       </div>
 
       {/* TOP 3 CARDS */}

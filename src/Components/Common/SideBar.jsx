@@ -18,20 +18,24 @@ export default function SideBar() {
   return (
     <>
       <section className="h-screen overflow-y-scroll bg-[#1F2937]">
-        <div className="py-5 border-b-2 border-amber-50">
-          <Link to={"#"}>
+        <div className="sticky top-0 bg-[black] z-[9999] py-5 border-b-2 border-amber-50">
+          <Link to={"/dashboard"}>
             <img className="mx-auto" src="/images/logo.svg" />
           </Link>
         </div>
 
+        {/* dashboard */}
         <h3 className="text-[white] font-bold py-2 flex justify-center hover:bg-[#2f363f] m-2 rounded-2xl">
           <Link className="flex items-center gap-2" to={"/dashboard"}>
             <MdDashboard />
             Dashboard
           </Link>
         </h3>
+        {/* end */}
+
         <hr className="text-[grey]" />
 
+        {/* users */}
         <div className="">
           <div
             onClick={() => setOpenMenu(openMenu == 1 ? 0 : 1)}
@@ -49,7 +53,7 @@ export default function SideBar() {
           {openMenu == 1 && (
             <ul className="text-[white] px-5">
               <li className="flex gap-2 items-center hover:bg-[#2f363f] py-2 rounded-2xl ps-5">
-                <Link to={"/viewuser"} className="flex items-center gap-2 text-[13px]">
+                <Link to={"/users/view"} className="flex items-center gap-2 text-[13px]">
                   <FaRegDotCircle />
                   View User
                 </Link>
@@ -57,7 +61,9 @@ export default function SideBar() {
             </ul>
           )}
         </div>
+        {/* end */}
 
+        {/* enquirys */}
         <div className="">
           <div
             onClick={() => setOpenMenu(openMenu == 2 ? 0 : 2)}
@@ -75,13 +81,13 @@ export default function SideBar() {
           {openMenu == 2 && (
             <ul className="text-[white] px-5">
               <li className="flex gap-2 items-center hover:bg-[#2f363f] py-2 rounded-2xl ps-5">
-                <Link to={"/contactenquiry"} className="flex items-center gap-2 text-[13px]">
+                <Link to={"/enquirys/contact-enquirys"} className="flex items-center gap-2 text-[13px]">
                   <FaRegDotCircle />
                   Contact Enquirys
                 </Link>
               </li>
               <li className="flex gap-2 items-center hover:bg-[#2f363f] py-2 rounded-2xl ps-5">
-                <Link to={"/nlm"} className="flex items-center gap-2 text-[13px]">
+                <Link to={"/enquirys/newsletters"} className="flex items-center gap-2 text-[13px]">
                   <FaRegDotCircle />
                   Newsletters
                 </Link>
@@ -89,7 +95,9 @@ export default function SideBar() {
             </ul>
           )}
         </div>
+        {/* end */}
 
+        {/* colors */}
         <div className="">
           <div
             onClick={() => setOpenMenu(openMenu == 3 ? 0 : 3)}
@@ -107,13 +115,13 @@ export default function SideBar() {
           {openMenu == 3 && (
             <ul className="text-[white] px-5">
               <li className="flex gap-2 items-center hover:bg-[#2f363f] py-2 rounded-2xl ps-5">
-                <Link to={"addcolor"} className="flex items-center gap-2 text-[13px]">
+                <Link to={"color/add"} className="flex items-center gap-2 text-[13px]">
                   <FaRegDotCircle />
                   Add Colors
                 </Link>
               </li>
               <li className="flex gap-2 items-center hover:bg-[#2f363f] py-2 rounded-2xl ps-5">
-                <Link to={"/viewcolor"} className="flex items-center gap-2 text-[13px]">
+                <Link to={"color/view"} className="flex items-center gap-2 text-[13px]">
                   <FaRegDotCircle />
                   View Color
                 </Link>
@@ -121,7 +129,9 @@ export default function SideBar() {
             </ul>
           )}
         </div>
+        {/* end */}
 
+        {/* materials */}
         <div className="">
           <div
             onClick={() => setOpenMenu(openMenu == 4 ? 0 : 4)}
@@ -139,13 +149,13 @@ export default function SideBar() {
           {openMenu == 4 && (
             <ul className="text-[white] px-5">
               <li className="flex gap-2 items-center hover:bg-[#2f363f] py-2 rounded-2xl ps-5">
-                <Link to={"/addmaterial"} className="flex items-center gap-2 text-[13px]">
+                <Link to={"materials/add"} className="flex items-center gap-2 text-[13px]">
                   <FaRegDotCircle />
                   Add Material
                 </Link>
               </li>
               <li className="flex gap-2 items-center hover:bg-[#2f363f] py-2 rounded-2xl ps-5">
-                <Link to={"/viewmaterial"} className="flex items-center gap-2 text-[13px]">
+                <Link to={"materials/view"} className="flex items-center gap-2 text-[13px]">
                   <FaRegDotCircle />
                   View Materials
                 </Link>
@@ -153,7 +163,9 @@ export default function SideBar() {
             </ul>
           )}
         </div>
+        {/* end */}
 
+        {/* parent-category */}
         <div className="">
           <div
             onClick={() => setOpenMenu(openMenu == 5 ? 0 : 5)}
@@ -171,13 +183,13 @@ export default function SideBar() {
           {openMenu == 5 && (
             <ul className="text-[white] px-5">
               <li className="flex gap-2 items-center hover:bg-[#2f363f] py-2 rounded-2xl ps-5">
-                <Link to={"/addcategory"} className="flex items-center gap-2 text-[13px]">
+                <Link to={"category/add"} className="flex items-center gap-2 text-[13px]">
                   <FaRegDotCircle />
                   Add Category
                 </Link>
               </li>
               <li className="flex gap-2 items-center hover:bg-[#2f363f] py-2 rounded-2xl ps-5">
-                <Link to={"/viewcategory"} className="flex items-center gap-2 text-[13px]">
+                <Link to={"category/view"} className="flex items-center gap-2 text-[13px]">
                   <FaRegDotCircle />
                   View Category
                 </Link>
@@ -185,7 +197,9 @@ export default function SideBar() {
             </ul>
           )}
         </div>
+        {/* end */}
 
+        {/* sub-categorys */}
         <div className="">
           <div
             onClick={() => setOpenMenu(openMenu == 6 ? 0 : 6)}
@@ -203,13 +217,13 @@ export default function SideBar() {
           {openMenu == 6 && (
             <ul className="text-[white] px-5">
               <li className="flex gap-2 items-center hover:bg-[#2f363f] py-2 rounded-2xl ps-5">
-                <Link to={"/addsubcategory"} className="flex items-center gap-2 text-[13px]">
+                <Link to={"category/sub-category/add"} className="flex items-center gap-2 text-[13px]">
                   <FaRegDotCircle />
                   Add Sub Category
                 </Link>
               </li>
               <li className="flex gap-2 items-center hover:bg-[#2f363f] py-2 rounded-2xl ps-5">
-                <Link to={"/viewsubcategory"} className="flex items-center gap-2 text-[13px]">
+                <Link to={"category/sub-category/view"} className="flex items-center gap-2 text-[13px]">
                   <FaRegDotCircle />
                   View Sub Category
                 </Link>
@@ -217,7 +231,9 @@ export default function SideBar() {
             </ul>
           )}
         </div>
+        {/* end */}
 
+        {/* sub-sub-category */}
         <div className="">
           <div
             onClick={() => setOpenMenu(openMenu == 7 ? 0 : 7)}
@@ -235,13 +251,13 @@ export default function SideBar() {
           {openMenu == 7 && (
             <ul className="text-[white] px-5">
               <li className="flex gap-2 items-center hover:bg-[#2f363f] py-2 rounded-2xl ps-5">
-                <Link to={"/addsubsubcategory"} className="flex items-center gap-2 text-[13px]">
+                <Link to={"category/sub-sub-category/add"} className="flex items-center gap-2 text-[13px]">
                   <FaRegDotCircle />
                   Add Sub Sub Category
                 </Link>
               </li>
               <li className="flex gap-2 items-center hover:bg-[#2f363f] py-2 rounded-2xl ps-5">
-                <Link to={"/viewsubsubcategory"} className="flex items-center gap-2 text-[13px]">
+                <Link to={"category/sub-sub-category/view"} className="flex items-center gap-2 text-[13px]">
                   <FaRegDotCircle />
                   View Sub Sub Category
                 </Link>
@@ -249,7 +265,9 @@ export default function SideBar() {
             </ul>
           )}
         </div>
+        {/* end */}
 
+        {/* products */}
         <div className="">
           <div
             onClick={() => setOpenMenu(openMenu == 8 ? 0 : 8)}
@@ -267,13 +285,13 @@ export default function SideBar() {
           {openMenu == 8 && (
             <ul className="text-[white] px-5">
               <li className="flex gap-2 items-center hover:bg-[#2f363f] py-2 rounded-2xl ps-5">
-                <Link to={"/addproduct"} className="flex items-center gap-2 text-[13px]">
+                <Link to={"products/add"} className="flex items-center gap-2 text-[13px]">
                   <FaRegDotCircle />
                   Add Products
                 </Link>
               </li>
               <li className="flex gap-2 items-center hover:bg-[#2f363f] py-2 rounded-2xl ps-5">
-                <Link to={"/viewproduct"} className="flex items-center gap-2 text-[13px]">
+                <Link to={"products/view"} className="flex items-center gap-2 text-[13px]">
                   <FaRegDotCircle />
                   View Products
                 </Link>
@@ -281,7 +299,9 @@ export default function SideBar() {
             </ul>
           )}
         </div>
+        {/* end */}
 
+        {/* why-we-choose-us */}
         <div className="">
           <div
             onClick={() => setOpenMenu(openMenu == 9 ? 0 : 9)}
@@ -299,13 +319,13 @@ export default function SideBar() {
           {openMenu == 9 && (
             <ul className="text-[white] px-5">
               <li className="flex gap-2 items-center hover:bg-[#2f363f] py-2 rounded-2xl ps-5">
-                <Link to={"/addwhychooseus"} className="flex items-center gap-2 text-[13px]">
+                <Link to={"/why-choose-us/add"} className="flex items-center gap-2 text-[13px]">
                   <FaRegDotCircle />
                   Add Why Choose us
                 </Link>
               </li>
               <li className="flex gap-2 items-center hover:bg-[#2f363f] py-2 rounded-2xl ps-5">
-                <Link to={"/viewwhychooseus"} className="flex items-center gap-2 text-[13px]">
+                <Link to={"/why-choose-us/view"} className="flex items-center gap-2 text-[13px]">
                   <FaRegDotCircle />
                   View Why Choose Us
                 </Link>
@@ -313,7 +333,9 @@ export default function SideBar() {
             </ul>
           )}
         </div>
+        {/* end */}
 
+        {/* orders */}
         <div className="">
           <div
             onClick={() => setOpenMenu(openMenu == 10 ? 0 : 10)}
@@ -331,7 +353,7 @@ export default function SideBar() {
           {openMenu == 10 && (
             <ul className="text-[white] px-5">
               <li className="flex gap-2 items-center hover:bg-[#2f363f] py-2 rounded-2xl ps-5">
-                <Link to={"/orderlist"} className="flex items-center gap-2 text-[13px]">
+                <Link to={"/orders/orders"} className="flex items-center gap-2 text-[13px]">
                   <FaRegDotCircle />
                   Orders
                 </Link>
@@ -339,7 +361,9 @@ export default function SideBar() {
             </ul>
           )}
         </div>
+        {/* end */}
 
+        {/* slider */}
         <div className="">
           <div
             onClick={() => setOpenMenu(openMenu == 11 ? 0 : 11)}
@@ -357,13 +381,13 @@ export default function SideBar() {
           {openMenu == 11 && (
             <ul className="text-[white] px-5">
               <li className="flex gap-2 items-center hover:bg-[#2f363f] py-2 rounded-2xl ps-5">
-                <Link to={"/addslider"} className="flex items-center gap-2 text-[13px]">
+                <Link to={"sliders/add"} className="flex items-center gap-2 text-[13px]">
                   <FaRegDotCircle />
                   Add Slider
                 </Link>
               </li>
               <li className="flex gap-2 items-center hover:bg-[#2f363f] py-2 rounded-2xl ps-5">
-                <Link to={"/viewslider"} className="flex items-center gap-2 text-[13px]">
+                <Link to={"sliders/view"} className="flex items-center gap-2 text-[13px]">
                   <FaRegDotCircle />
                   View Slider
                 </Link>
@@ -371,7 +395,9 @@ export default function SideBar() {
             </ul>
           )}
         </div>
+        {/* end */}
 
+        {/* country */}
         <div className="">
           <div
             onClick={() => setOpenMenu(openMenu == 12 ? 0 : 12)}
@@ -389,13 +415,13 @@ export default function SideBar() {
           {openMenu == 12 && (
             <ul className="text-[white] px-5">
               <li className="flex gap-2 items-center hover:bg-[#2f363f] py-2 rounded-2xl ps-5">
-                <Link to={"/addcountry"} className="flex items-center gap-2 text-[13px]">
+                <Link to={"country/add"} className="flex items-center gap-2 text-[13px]">
                   <FaRegDotCircle />
                   Add Country
                 </Link>
               </li>
               <li className="flex gap-2 items-center hover:bg-[#2f363f] py-2 rounded-2xl ps-5">
-                <Link to={"/viewcountry"} className="flex items-center gap-2 text-[13px]">
+                <Link to={"country/view"} className="flex items-center gap-2 text-[13px]">
                   <FaRegDotCircle />
                   View Country
                 </Link>
@@ -403,7 +429,9 @@ export default function SideBar() {
             </ul>
           )}
         </div>
+        {/* end */}
 
+        {/* testimonial */}
         <div className="">
           <div
             onClick={() => setOpenMenu(openMenu == 13 ? 0 : 13)}
@@ -421,13 +449,13 @@ export default function SideBar() {
           {openMenu == 13 && (
             <ul className="text-[white] px-5">
               <li className="flex gap-2 items-center hover:bg-[#2f363f] py-2 rounded-2xl ps-5">
-                <Link to={"/addtestimonial"} className="flex items-center gap-2 text-[13px]">
+                <Link to={"/testimonial/add"} className="flex items-center gap-2 text-[13px]">
                   <FaRegDotCircle />
                   Add Testimonials
                 </Link>
               </li>
               <li className="flex gap-2 items-center hover:bg-[#2f363f] py-2 rounded-2xl ps-5">
-                <Link to={"/viewtestimonial"} className="flex items-center gap-2 text-[13px]">
+                <Link to={"/testimonial/view"} className="flex items-center gap-2 text-[13px]">
                   <FaRegDotCircle />
                   View Testimonials
                 </Link>
@@ -435,7 +463,9 @@ export default function SideBar() {
             </ul>
           )}
         </div>
+        {/* end */}
 
+        {/* faq */}
         <div className="">
           <div
             onClick={() => setOpenMenu(openMenu == 14 ? 0 : 14)}
@@ -453,13 +483,13 @@ export default function SideBar() {
           {openMenu == 14 && (
             <ul className="text-[white] px-5">
               <li className="flex gap-2 items-center hover:bg-[#2f363f] py-2 rounded-2xl ps-5">
-                <Link to={"/addfaq"} className="flex items-center gap-2 text-[13px]">
+                <Link to={"/faq/add"} className="flex items-center gap-2 text-[13px]">
                   <FaRegDotCircle />
                   Add FAQS
                 </Link>
               </li>
               <li className="flex gap-2 items-center hover:bg-[#2f363f] py-2 rounded-2xl ps-5">
-                <Link to={"/viewfaq"} className="flex items-center gap-2 text-[13px]">
+                <Link to={"/faq/view"} className="flex items-center gap-2 text-[13px]">
                   <FaRegDotCircle />
                   View FAQS
                 </Link>
@@ -467,6 +497,7 @@ export default function SideBar() {
             </ul>
           )}
         </div>
+        {/* end */}
 
         <div className="">
           <div
